@@ -30,9 +30,10 @@ MonoBehaviour:
     - {fileID: 946333555065618502, guid: a019c8328ec06a44e82877df9eeb1c00, type: 3}
     - {fileID: 6641026113684525196, guid: 4d624b3317e05f745bfe75f7f5f4c04c, type: 3}
   - _books:
-    - {fileID: 2340637887713826030, guid: 99cdb7cfc6f999a49ab00e657a64e65b, type: 3}
-    - {fileID: 2340637887713826030, guid: bc182d78891d6c54aa74f465d441e0fd, type: 3}
-    - {fileID: 6641026113684525196, guid: 4d624b3317e05f745bfe75f7f5f4c04c, type: 3}
-    - {fileID: 6641026113684525196, guid: bdb7a4f947eefac49a09df0566680092, type: 3}
     - {fileID: 946333555065618502, guid: 37f2b70e29ddd394bbcc9d951b30ed22, type: 3}
     - {fileID: 946333555065618502, guid: 528b2d1766a62e249b38c73103a62af6, type: 3}
+    - {fileID: 2340637887713826030, guid: 9ee33db83cd4d0b44a505bcbde16dbcf, type: 3}
+    - {fileID: 4384492682865949418, guid: 1b1a017a02c584d40ad9f8ac65799751, type: 3}
+    - {fileID: 4384492682865949418, guid: 56769f39699d2fb45bd1fd7ab74eb2b0, type: 3}
+    - {fileID: 1766267723811937374, guid: e842622d6d81d7c4f8651ad7588cf0b4, type: 3}
+    - {fileID: 1766267723811937374, guid: 785a16f3585d31c4fbdf0e138c8d7efd, type: 3}
