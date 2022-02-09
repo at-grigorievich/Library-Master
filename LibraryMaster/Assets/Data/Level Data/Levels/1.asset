@@ -16,9 +16,9 @@ MonoBehaviour:
   name: 
   _levelType: 3
   _shelfs:
-  - {fileID: 2203364568761008750, guid: 6b59d124107c0e6499c4f9f5dd38ea2d, type: 3}
-  - {fileID: 6876284852152762404, guid: df6ff35dbf920dc498318561e6463c73, type: 3}
-  - {fileID: 3573920760463609761, guid: 7cff2fdaf9f007c4d806ff0b74ce5a8d, type: 3}
+  - {fileID: 3573920760463609761, guid: 611b2f2eb4b6d1a478887c6bcc6540af, type: 3}
+  - {fileID: 2203364568761008750, guid: e2a64b72f45b8ca4ca6c64a506669459, type: 3}
+  - {fileID: 6876284852152762404, guid: 9a3b0271226a1c64bad6af68ca9d695a, type: 3}
   _booksOnShelfs:
   - _books:
     - {fileID: 946333555065618502, guid: a019c8328ec06a44e82877df9eeb1c00, type: 3}
@@ -29,3 +29,8 @@ MonoBehaviour:
   - _books:
     - {fileID: 946333555065618502, guid: a019c8328ec06a44e82877df9eeb1c00, type: 3}
     - {fileID: 6641026113684525196, guid: 4d624b3317e05f745bfe75f7f5f4c04c, type: 3}
+  - _books:
+    - {fileID: 946333555065618502, guid: a019c8328ec06a44e82877df9eeb1c00, type: 3}
+    - {fileID: 946333555065618502, guid: 90c3e0998e6ee5e4584bff221daa861f, type: 3}
+    - {fileID: 6641026113684525196, guid: 4d624b3317e05f745bfe75f7f5f4c04c, type: 3}
+    - {fileID: 6641026113684525196, guid: 24f0844ac6cef5c42968e8dc269aeb61, type: 3}
