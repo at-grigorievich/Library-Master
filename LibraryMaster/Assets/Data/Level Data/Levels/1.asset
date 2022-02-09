@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   name: 
-  _levelType: 0
-  _shelfs: []
+  _levelType: 3
+  _shelfs:
+  - {fileID: 3573920760463609761, guid: 7cff2fdaf9f007c4d806ff0b74ce5a8d, type: 3}
+  - {fileID: 2203364568761008750, guid: 6b59d124107c0e6499c4f9f5dd38ea2d, type: 3}
+  - {fileID: 6876284852152762404, guid: df6ff35dbf920dc498318561e6463c73, type: 3}
   _booksOnShelfs: []

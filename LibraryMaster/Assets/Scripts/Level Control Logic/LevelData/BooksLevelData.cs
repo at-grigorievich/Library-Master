@@ -41,10 +41,6 @@ namespace ATG.LevelControl
                     spawnedShelfs[i].InitBooks(_booksOnShelfs[i].Books);
                 }
             }
-            else
-            {
-                throw new IndexOutOfRangeException("Books array length is less than shelfs length");
-            }
 
             return result;
         }
