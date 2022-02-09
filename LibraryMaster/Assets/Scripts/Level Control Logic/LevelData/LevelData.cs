@@ -7,12 +7,16 @@ namespace ATG.LevelControl
         Line,
         Matrix,
         ZenjectLine,
-        ZenjectMatrix
+        ZenjectMatrix,
+        Static,
+        ZenjectStatic
     }
     public enum LineLevelType
     {
         Line,
-        ZenjectLine
+        ZenjectLine,
+        Static,
+        ZenjectStatic
     }
 
     public enum MatrixLevelType
