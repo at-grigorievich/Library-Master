@@ -2,7 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a25ab9ee-e891-4f8b-a7f2-2326c6ea43ea" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LibraryMaster/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LibraryMaster/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Data/Level Data/Levels/1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Level Data/Levels/1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Blue.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Brown.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Brown.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Brown.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Brown.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Green.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Green.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Green.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Green.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Orange.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Orange.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Orange.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Orange.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Yellow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Yellow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Yellow.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Yellow.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Blue.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Brown.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Brown.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Brown.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Brown.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Green.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Green.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Green.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Green.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Orange.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Orange.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Orange.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Orange.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Yellow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Yellow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Yellow.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Yellow.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Bottom.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Bottom.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Middle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Middle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Top.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Top.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Book logic/Book.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/Book.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Book logic/SortBySize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/SortBySize.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level Control Logic/Blocks Logic/ShelfBlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level Control Logic/Blocks Logic/ShelfBlock.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level Control Logic/LevelData/BooksLevelData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level Control Logic/LevelData/BooksLevelData.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
