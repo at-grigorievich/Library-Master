@@ -13,6 +13,7 @@ namespace ATG.LevelControl
         public Book[] Books => _books;
     }
     
+    [CreateAssetMenu(fileName = "Level Data", menuName = "Levels/New Books Level", order = 0)]
     public class BooksLevelData: LevelData
     {
         [Space(10)]
