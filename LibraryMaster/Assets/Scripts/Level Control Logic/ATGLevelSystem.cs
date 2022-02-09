@@ -40,16 +40,21 @@ namespace ATG.LevelControl
                 case LevelType.Line : 
                     levelBehaviour = new LineLevelBehaviour();
                     break;
-                
                 case LevelType.Matrix :
                     levelBehaviour = new MatrixLevelBehaviour();
                     break;
-                
+                case LevelType.Static:
+                    levelBehaviour = new StaticLevelBehaviour();
+                    break;
+
                 case LevelType.ZenjectLine :
                     levelBehaviour = new ZenjectLineLevelBehaviour<EnvironmentBlock>(_blockFactory);
                     break;
                 case LevelType.ZenjectMatrix :
                     levelBehaviour = new ZenjectMatrixLevelBehaviour<EnvironmentBlock>(_blockFactory);
+                    break;
+                case LevelType.ZenjectStatic :
+                    levelBehaviour = new ZenjectStaticLevelBehaviour<EnvironmentBlock>(_blockFactory);
                     break;
             }
             
