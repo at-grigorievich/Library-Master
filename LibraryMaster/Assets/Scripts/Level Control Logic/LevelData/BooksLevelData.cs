@@ -34,11 +34,18 @@ namespace ATG.LevelControl
             var result = createLevel.InstantiateBlocks<T,ShelfBlock>(_shelfs, levelParent);
 
             var spawnedShelfs = result.Cast<ShelfBlock>().ToArray();
-            if (spawnedShelfs.Length > 0 && _booksOnShelfs.Length >= spawnedShelfs.Length)
+            if (spawnedShelfs.Length > 0)
             {
                 for (var i = 0; i < spawnedShelfs.Length; i++)
                 {
-                    spawnedShelfs[i].InitBooks(_booksOnShelfs[i].Books);
+                    if (i < _booksOnShelfs.Length)
+                    {
+                        spawnedShelfs[i].InitShelf(_booksOnShelfs[i].Books);
+                    }
+                    else
+                    {
+                        spawnedShelfs[i].InitShelf();
+                    }
                 }
             }
 

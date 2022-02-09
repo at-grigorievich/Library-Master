@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using BookLogic;
 using UnityEngine;
 
@@ -6,15 +7,52 @@ namespace ATG.LevelControl
 {
     public class ShelfBlock: EnvironmentBlock
     {
+        [Space(5)]
+        [SerializeField] private Transform _spawnPosition;
+        
         private SortedSet<Book> _booksOnShelf;
 
-        public void InitBooks(Book[] books)
+        private Vector3 _placePosition;
+        
+        public void InitShelf(Book[] books)
         {
-            _booksOnShelf = new SortedSet<Book>(books,new SortBySize());
+           InitShelf();
+           
+            if (books.Length > 0)
+            {
+                _booksOnShelf = new SortedSet<Book>(new SortBySize());
+                SpawnBooks(books);
+            }
+        }
+        public void InitShelf()
+        {
+            _placePosition = _spawnPosition.position;
+        }
 
+        public void AddBook(Book book)
+        {
+            var bookTransform= book.transform;
+            
+            bookTransform.position = _placePosition + book.Thickness / 4f * Vector3.up;
+
+            _placePosition = bookTransform.position + book.Thickness / 4f * Vector3.up;
+        }
+        public void RemoveBook()
+        {
+            
+        }
+        
+        private void SpawnBooks(Book[] blockPrefabs)
+        {
+            foreach (var b in blockPrefabs)
+            {
+                var spawnedBook = Instantiate(b);
+                _booksOnShelf.Add(spawnedBook);
+            }
+            
             foreach (var book in _booksOnShelf)
             {
-                Debug.Log(book.name);
+                AddBook(book);
             }
         }
     }
