@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 946333555065618503}
   - component: {fileID: 946333555065618502}
+  - component: {fileID: -6862143150938753740}
   m_Layer: 0
   m_Name: 1 Yellow
   m_TagString: Untagged
@@ -45,8 +46,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weight: 1
-  _heightDelay: 0.15
   _thickness: 0.73
+--- !u!65 &-6862143150938753740
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946333555065618504}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1704875, y: 0.4, z: 1.5196309}
+  m_Center: {x: 0.035282552, y: 0, z: -0.0049692392}
 --- !u!1 &4366363611499048037
 GameObject:
   m_ObjectHideFlags: 0
