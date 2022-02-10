@@ -11,6 +11,10 @@ namespace BookLogic
     
     public interface IMovable
     {
+        BookParametersContainer ParametersData { get; }
+        
+        Transform Transform { get; }
+        
         MovableStatus MovableStatus { get; }
         Vector3 PreviousPlacePosition { get; }
         Vector3 FuturePosition { get; }

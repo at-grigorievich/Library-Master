@@ -11,7 +11,14 @@ namespace Player_Logic
         [Inject] private IInputable _inputable;
 
         private IMovable _movableObject;
-        
+
+        private Camera _camera;
+
+        private void Awake()
+        {
+            _camera = Camera.main;
+        }
+
         private void Start()
         {
             _inputable.OnStartTouch += OnStartTouch;
@@ -38,7 +45,8 @@ namespace Player_Logic
         {
             if (_movableObject != null)
             {
-                _movableObject.OnMoving(e);
+                Vector3 globalPosition = _camera.ScreenToWorldPoint(e);
+                _movableObject.OnMoving(globalPosition);
             }
         }
     }

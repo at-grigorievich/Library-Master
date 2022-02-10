@@ -7,6 +7,8 @@ namespace BookLogic
 {
     public class Book : StatementBehaviour<IMovable>, IWeightable, IMovable
     {
+        [SerializeField] private BookParametersContainer _bookParameters;
+        [Space(10)]
         [Range(1,20)]
         [SerializeField] private int _weight;
         [Space(5)]
@@ -15,6 +17,9 @@ namespace BookLogic
         public int Weight => _weight;
         public float Thickness => _thickness;
         
+        public BookParametersContainer ParametersData => _bookParameters;
+        public Transform Transform => transform;
+
         public MovableStatus MovableStatus { get; private set; } = MovableStatus.Idle;
         
         public Vector3 PreviousPlacePosition { get; private set; }
@@ -44,6 +49,7 @@ namespace BookLogic
         public void OnStartMoving()
         {
             MovableStatus = MovableStatus.StartMoving;
+            
             PreviousPlacePosition = transform.position;
         }
 
