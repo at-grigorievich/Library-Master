@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054f467492b444ba8e4b30379c04a49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bookParameters: {fileID: 11400000, guid: 1430911938be57f44a95060bacceaf72, type: 2}
   _weight: 3
   _thickness: 0.7
 --- !u!1 &6712085228270281690
