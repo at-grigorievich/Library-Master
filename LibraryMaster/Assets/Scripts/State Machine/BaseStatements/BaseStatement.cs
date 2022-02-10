@@ -21,6 +21,11 @@ namespace ATGStateMachine
             StateSwitcher = stateSwitcher;
         }
 
+        protected BaseStatement()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public abstract void Enter(); // Enter the state callback
         public virtual void Exit() { } // Exit the state callback
         public virtual void Execute() { } // Stay the state callback

@@ -2,52 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a25ab9ee-e891-4f8b-a7f2-2326c6ea43ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/Interfaces/IMovable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/Interfaces/IMovable.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Input Logic.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Input Logic/InputService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Input Logic/InputService.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Input Logic/Interfaces.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Level Control Logic/Blocks Logic/Interfaces/IShelf.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Level Control Logic/Blocks Logic/Interfaces/IShelf.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player Logic.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player Logic/Interfaces.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player Logic/Zenject.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/States/BookCancelState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/States/BookCancelState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/States/BookIdleState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/States/BookIdleState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/States/BookMovingEndState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/States/BookMovingEndState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/States/BookMovingState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/States/BookMovingState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/States/BookSetupState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/States/BookSetupState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player Logic/Interfaces/IInputable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player Logic/Interfaces/IInputable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player Logic/PlayerInputService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player Logic/PlayerInputService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player Logic/PlayerLogic.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player Logic/PlayerLogic.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LibraryMaster/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LibraryMaster/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Blue.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Brown.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Brown.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Green.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Green.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Orange.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Orange.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Yellow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Yellow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Bottom L.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Bottom L.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Bottom M.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Bottom M.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Bottom R.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Bottom R.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Middle L.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Middle L.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Middle M.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Middle M.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Middle R.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Middle R.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Top L.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Top L.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Top M.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Top M.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Top R.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Center/Shelf Center Top R.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Left/Shelf Left Bottom L.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Left/Shelf Left Bottom L.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Left/Shelf Left Bottom M.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Left/Shelf Left Bottom M.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Left/Shelf Left Bottom R.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Left/Shelf Left Bottom R.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Left/Shelf Left Middle L.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Left/Shelf Left Middle L.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Left/Shelf Left Middle M.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Left/Shelf Left Middle M.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Left/Shelf Left Middle R.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Left/Shelf Left Middle R.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Left/Shelf Left Top L.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Left/Shelf Left Top L.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Left/Shelf Left Top M.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Left/Shelf Left Top M.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Left/Shelf Left Top R.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Left/Shelf Left Top R.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Right/Shelf Right Bottom L.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Right/Shelf Right Bottom L.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Right/Shelf Right Bottom M.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Right/Shelf Right Bottom M.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Right/Shelf Right Bottom R.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Right/Shelf Right Bottom R.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Right/Shelf Right Middle L.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Right/Shelf Right Middle L.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Right/Shelf Right Middle M.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Right/Shelf Right Middle M.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Right/Shelf Right Middle R.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Right/Shelf Right Middle R.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Right/Shelf Right Top L.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Right/Shelf Right Top L.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Right/Shelf Right Top M.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Right/Shelf Right Top M.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Right/Shelf Right Top R.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shelfs/Right/Shelf Right Top R.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Book logic/Book.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/Book.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level Control Logic/Blocks Logic/ShelfBlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level Control Logic/Blocks Logic/ShelfBlock.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Book logic/Interfaces/IMovable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/Interfaces/IMovable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input Logic.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input Logic/InputService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input Logic/InputService.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input Logic/Interfaces.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/State Machine/BaseStatements/BaseStatement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/State Machine/BaseStatements/BaseStatement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +43,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://D:/UnityProjects/Entrap-3D/Entrap3D/Assets/Scripts/Player Control Logic/Interfaces/IInputable.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -113,7 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1644419313882</updated>
       <workItem from="1644419323477" duration="3981000" />
-      <workItem from="1644513012802" duration="2281000" />
+      <workItem from="1644513012802" duration="7115000" />
     </task>
     <servers />
   </component>
