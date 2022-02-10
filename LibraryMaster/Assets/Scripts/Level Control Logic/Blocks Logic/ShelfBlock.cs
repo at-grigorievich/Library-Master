@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace ATG.LevelControl
 {
-    public class ShelfBlock: EnvironmentBlock
+    public class ShelfBlock: EnvironmentBlock, IShelf
     {
         [Space(5)]
         [SerializeField] private Transform _spawnPosition;
@@ -34,12 +34,13 @@ namespace ATG.LevelControl
             var bookTransform= book.transform;
             
             bookTransform.position = _placePosition + book.Thickness / 4f * Vector3.up;
-
+            bookTransform.SetParent(transform);
+            
             _placePosition = bookTransform.position + book.Thickness / 4f * Vector3.up;
         }
-        public void RemoveBook()
+        public Book RemoveBook()
         {
-            
+            return _booksOnShelf.Last();
         }
         
         private void SpawnBooks(Book[] blockPrefabs)

@@ -2,7 +2,7 @@
 
 namespace BookLogic
 {
-    public class Book : MonoBehaviour, IWeightable
+    public class Book : MonoBehaviour, IWeightable, IMovable
     {
         [Range(1,20)]
         [SerializeField] private int _weight;
