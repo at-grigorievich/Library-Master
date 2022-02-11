@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 3573920760463609766}
   - component: {fileID: 3573920760463609761}
   - component: {fileID: 6227712736385380876}
+  - component: {fileID: -2957476528182518281}
   m_Layer: 0
   m_Name: Shelf Left Top L
   m_TagString: Untagged
@@ -94,6 +95,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &-2957476528182518281
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3573920760463609760}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9899297, y: 0.26149327, z: 0.8694762}
+  m_Center: {x: -0.008700132, y: 0.64039934, z: -0.4304257}
 --- !u!1 &3573920761263875891
 GameObject:
   m_ObjectHideFlags: 0

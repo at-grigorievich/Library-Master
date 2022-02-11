@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2203364568761008751}
   - component: {fileID: 2203364568761008750}
   - component: {fileID: 8011757299600675384}
+  - component: {fileID: -7630722584362846992}
   m_Layer: 0
   m_Name: Shelf Center Middle L
   m_TagString: Untagged
@@ -64,6 +65,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &-7630722584362846992
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2203364568761008744}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9899297, y: 0.26149327, z: 0.8694762}
+  m_Center: {x: -0.008700132, y: 0.64039934, z: -0.4304257}
 --- !u!1 &2699327440558219090
 GameObject:
   m_ObjectHideFlags: 0
