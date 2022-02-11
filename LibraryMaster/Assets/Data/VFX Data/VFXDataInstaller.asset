@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37d164d3ed8948899388a8a553f66079, type: 3}
-  m_Name: VFX data
+  m_Script: {fileID: 11500000, guid: 28f4ba8ffb31698418da64e5e917d55f, type: 3}
+  m_Name: VFXDataInstaller
   m_EditorClassIdentifier: 
-  data:
-  - vfxType: 5
-    vfxPrefab: {fileID: 1818598753637974352, guid: 38edf377800e3f84c8c2833e5a014944, type: 3}
+  dataList: {fileID: 11400000, guid: 9a28aa5b7cc85bd48afa0d934f5dad34, type: 2}

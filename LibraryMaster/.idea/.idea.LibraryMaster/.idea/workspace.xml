@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a25ab9ee-e891-4f8b-a7f2-2326c6ea43ea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Debrief Logic.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Debrief Logic/DebriefCongratulationShower.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Debrief Logic/DebriefCongratulationShower.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LibraryMaster/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LibraryMaster/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/VFX Data/VFX data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/VFX Data/VFX data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Logic/PlayerLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Logic/PlayerLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VFX Logic/IVFXControllable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VFX Logic/IVFXControllable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VFX Logic/VFXCreatorService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VFX Logic/VFXCreatorService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using VFXLogic;
 using Zenject;
 
 namespace VFXLogic
@@ -13,7 +12,7 @@ namespace VFXLogic
         private Dictionary<VFXType, List<ParticleSystem>> _activeData = new Dictionary<VFXType, List<ParticleSystem>>();
 
 
-        public void PlayVFX(VFXType type, Vector3 position, Vector3 lookTO)
+        public ParticleSystem PlayVFX(VFXType type, Vector3 position, Vector3 lookTO)
         {
             if (!_activeData.ContainsKey(type))
             {
@@ -34,8 +33,10 @@ namespace VFXLogic
             waitingVFX.transform.LookAt(lookTO);
 
             waitingVFX.Play();
+            
+            return waitingVFX;
         }
-        public void PlayVFX(VFXType type, Vector3 position, Transform lookTo)
+        public ParticleSystem PlayVFX(VFXType type, Vector3 position, Transform lookTo)
         {
             if (!_activeData.ContainsKey(type))
             {
@@ -56,8 +57,10 @@ namespace VFXLogic
             waitingVFX.transform.LookAt(lookTo);
 
             waitingVFX.Play();
+            
+            return waitingVFX;
         }
-        public void PlayVFXLoop(VFXType type, Vector3 position, Vector3 lookTo)
+        public ParticleSystem PlayVFXLoop(VFXType type, Vector3 position, Vector3 lookTo)
         {
             ParticleSystem ps;
             
@@ -79,8 +82,10 @@ namespace VFXLogic
             ps.transform.LookAt(lookTo);
 
             ps.Play();
+
+            return ps;
         }
-        public void PlayVFXLoop(VFXType type, Vector3 position, Transform lookTo)
+        public ParticleSystem PlayVFXLoop(VFXType type, Vector3 position, Transform lookTo)
         {
             ParticleSystem ps;
             
@@ -102,6 +107,8 @@ namespace VFXLogic
             ps.transform.LookAt(lookTo);
 
             ps.Play();
+            
+            return ps;
         }
     }
 }
