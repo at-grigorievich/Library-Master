@@ -36,7 +36,8 @@ namespace BookLogic.States
             {
                 if (hit.transform.TryGetComponent(out IShelf shelf))
                 {
-                    Debug.Log("asfasfasf");
+                    MainObject.FutureShelf = shelf;
+                    StateSwitcher.StateSwitcher<BookPlaceSetupState>();
                 }
             }
             else

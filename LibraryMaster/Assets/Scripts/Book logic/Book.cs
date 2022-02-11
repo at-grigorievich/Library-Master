@@ -26,18 +26,24 @@ namespace BookLogic
         public Vector3 PreviousPlacePosition { get; private set; }
         public IShelf PreviousShelf { get; private set; }
         
-        public Vector3 FuturePosition { get; private set; }
-
         
+        public Vector3 FuturePosition { get; private set; }
+        public IShelf FutureShelf { get; set; }
+
         private void Awake()
         {
             AllStates.Add(new BookIdleState(this,this));
             AllStates.Add(new BookMovingState(this,this));
             AllStates.Add(new BookEndMovingState(this,this));
+            
             AllStates.Add(new BookCancelMovingState(
                 () => PreviousShelf.TryAddBook(this),
                 this,this));
-            
+
+            AllStates.Add(new BookPlaceSetupState(
+                () => FutureShelf.TryAddBook(this),
+                this,this));
+
             InitStartState();
             OnState();
         }

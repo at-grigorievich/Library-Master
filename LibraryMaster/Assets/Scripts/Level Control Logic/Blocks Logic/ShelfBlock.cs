@@ -34,21 +34,34 @@ namespace ATG.LevelControl
         {
             if (!_booksOnShelf.Contains(book))
             {
-                var lastBook = _booksOnShelf.Last();
+                if (_booksOnShelf.Count > 0)
+                {
+                    var lastBook = _booksOnShelf.Last();
 
-                var compare = new SortBySize().Compare(book, lastBook);
+                    var compare = new SortBySize().Compare(book, lastBook);
 
-                bool isCompare = compare == 1;
+                    bool isCompare = compare == 1;
 
-                if (isCompare)
+                    if (isCompare)
+                    {
+                        AddNewBook();
+                    }
+                    
+                    return isCompare;
+                }
+                else
+                {
+                    AddNewBook();
+                    return true;
+                }
+
+                void AddNewBook()
                 {
                     _booksOnShelf.Add(book);
                     AddBook(book);
                 }
-                
-                return isCompare;
             }
-
+            
             return false;
         }
 

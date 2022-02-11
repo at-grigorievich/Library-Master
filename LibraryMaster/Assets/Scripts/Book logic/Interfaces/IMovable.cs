@@ -22,6 +22,7 @@ namespace BookLogic
         IShelf PreviousShelf { get; }
         
         Vector3 FuturePosition { get; }
+        IShelf FutureShelf { get; set; }
 
         void OnIdle();
         void OnStartMoving(IShelf prvShelf);
