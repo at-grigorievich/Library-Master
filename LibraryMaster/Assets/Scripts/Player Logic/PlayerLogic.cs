@@ -27,10 +27,10 @@ namespace Player_Logic
         }
         
         
-        private void OnStartTouch(object sender, IMovable e)
+        private void OnStartTouch(object sender, ShelfBookArgs e)
         {
-            _movableObject = e;
-            _movableObject.OnStartMoving();
+            _movableObject = e.Movable;
+            _movableObject.OnStartMoving(e.Shelf);
         }
         
         private void OnEndTouch(object sender, EventArgs e)
@@ -38,6 +38,7 @@ namespace Player_Logic
             if (_movableObject != null)
             {
                 _movableObject.OnEndMoving();
+                _movableObject = null;
             }
         }
         

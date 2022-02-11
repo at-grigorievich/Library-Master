@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using BookLogic;
 using UnityEngine;
@@ -28,8 +29,47 @@ namespace ATG.LevelControl
         {
             _placePosition = _spawnPosition.position;
         }
+        
+        public bool TryAddBook(Book book)
+        {
+            if (!_booksOnShelf.Contains(book))
+            {
+                var lastBook = _booksOnShelf.Last();
 
-        public void AddBook(Book book)
+                var compare = new SortBySize().Compare(book, lastBook);
+
+                bool isCompare = compare == 1;
+
+                if (isCompare)
+                {
+                    _booksOnShelf.Add(book);
+                    AddBook(book);
+                }
+                
+                return isCompare;
+            }
+
+            return false;
+        }
+
+        public Book RemoveBook()
+        {
+            if (_booksOnShelf.Count > 0)
+            {
+                var selected = _booksOnShelf.Last();
+                selected.transform.SetParent(null);
+
+                _booksOnShelf.Remove(selected);
+
+                _placePosition -= selected.Thickness / 2f * Vector3.up;
+                
+                return selected;
+            }
+
+            throw new NullReferenceException("Cant find book on this shelf");
+        }
+        
+        private void AddBook(Book book)
         {
             var bookTransform= book.transform;
             
@@ -38,11 +78,6 @@ namespace ATG.LevelControl
             
             _placePosition = bookTransform.position + book.Thickness / 4f * Vector3.up;
         }
-        public Book RemoveBook()
-        {
-            return _booksOnShelf.Last();
-        }
-        
         private void SpawnBooks(Book[] blockPrefabs)
         {
             foreach (var b in blockPrefabs)

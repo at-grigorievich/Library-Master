@@ -9,7 +9,7 @@ namespace PlayerLogic
     {
         private Camera _camera;
         
-        public event EventHandler<IMovable> OnStartTouch;
+        public event EventHandler<ShelfBookArgs> OnStartTouch;
         public event EventHandler<Vector3> OnTouching;
         public event EventHandler OnEndTouch;
 
@@ -54,7 +54,8 @@ namespace PlayerLogic
             {
                 if (hit.transform.TryGetComponent(out IShelf shelf))
                 {
-                    OnStartTouch?.Invoke(this,shelf.RemoveBook());
+                    var arg = new ShelfBookArgs(shelf.RemoveBook(), shelf);
+                    OnStartTouch?.Invoke(this,arg);
                 }
             }
         }

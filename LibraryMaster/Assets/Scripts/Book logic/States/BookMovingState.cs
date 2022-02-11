@@ -9,14 +9,13 @@ namespace BookLogic.States
     {
         private Action _onMove;
         
-        public BookMovingState(IMovable mainObject, IStateSwitcher stateSwitcher) : base(mainObject, stateSwitcher)
+        public BookMovingState(IMovable mainObject, IStateSwitcher stateSwitcher) 
+            : base(mainObject, stateSwitcher)
         {
         }
 
         public override void Enter()
         {
-            MainObject.Transform.SetParent(null);
-            
             Vector3 boostPosition = MainObject.Transform.position
                                     + MainObject.ParametersData.BoostDelta;
 
@@ -32,6 +31,15 @@ namespace BookLogic.States
             {
                 _onMove?.Invoke();
             }
+            else
+            {
+                StateSwitcher.StateSwitcher<BookEndMovingState>();
+            }
+        }
+
+        public override void Exit()
+        {
+            _onMove = null;
         }
 
         private void MoveToTouch()

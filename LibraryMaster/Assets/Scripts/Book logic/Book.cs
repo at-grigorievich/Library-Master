@@ -1,4 +1,5 @@
 ﻿using System;
+using ATG.LevelControl;
 using ATGStateMachine;
 using BookLogic.States;
 using UnityEngine;
@@ -23,6 +24,8 @@ namespace BookLogic
         public MovableStatus MovableStatus { get; private set; } = MovableStatus.Idle;
         
         public Vector3 PreviousPlacePosition { get; private set; }
+        public IShelf PreviousShelf { get; private set; }
+        
         public Vector3 FuturePosition { get; private set; }
 
         
@@ -30,6 +33,10 @@ namespace BookLogic
         {
             AllStates.Add(new BookIdleState(this,this));
             AllStates.Add(new BookMovingState(this,this));
+            AllStates.Add(new BookEndMovingState(this,this));
+            AllStates.Add(new BookCancelMovingState(
+                () => PreviousShelf.TryAddBook(this),
+                this,this));
             
             InitStartState();
             OnState();
@@ -40,16 +47,41 @@ namespace BookLogic
             OnExecute();
         }
 
-        
+        private void OnDrawGizmos()
+        {
+            #if UNITY_EDITOR
+                float maxDistance = ParametersData.BoxCastDistance;
+
+                RaycastHit hit;
+
+                Vector3 zDelay = ParametersData.BoxCastSize.z / 2f * Vector3.forward;
+                bool isHit = Physics.BoxCast(transform.position + zDelay , ParametersData.BoxCastSize / 2, -transform.up, out hit,
+                    transform.rotation, maxDistance);
+
+                if (isHit)
+                {
+                    Gizmos.color = Color.red;
+                    Gizmos.DrawRay(transform.position,-transform.up*hit.distance);
+                    Gizmos.DrawWireCube(transform.position-transform.up*hit.distance,ParametersData.BoxCastSize);
+                }
+                else
+                {
+                    Gizmos.color = Color.green;
+                    Gizmos.DrawRay(transform.position,-transform.up*maxDistance);
+                }
+            #endif
+        }
+
         public void OnIdle()
         {
             MovableStatus = MovableStatus.Idle;
         }
 
-        public void OnStartMoving()
+        public void OnStartMoving(IShelf prvShelf)
         {
             MovableStatus = MovableStatus.StartMoving;
-            
+
+            PreviousShelf = prvShelf;
             PreviousPlacePosition = transform.position;
         }
 

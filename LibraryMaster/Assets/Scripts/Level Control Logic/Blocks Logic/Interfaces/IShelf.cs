@@ -4,7 +4,7 @@ namespace ATG.LevelControl
 {
     public interface IShelf
     {
-        void AddBook(Book book);
+        bool TryAddBook(Book book);
         Book RemoveBook();
     }
 }

@@ -4,7 +4,8 @@ namespace BookLogic.States
 {
     public class BookIdleState: BaseStatement<IMovable>
     {
-        public BookIdleState(IMovable mainObject, IStateSwitcher stateSwitcher) : base(mainObject, stateSwitcher)
+        public BookIdleState(IMovable mainObject, IStateSwitcher stateSwitcher) 
+            : base(mainObject, stateSwitcher)
         {
         }
 

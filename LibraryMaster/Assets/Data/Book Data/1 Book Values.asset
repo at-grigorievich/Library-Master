@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: 1 Book Values
   m_EditorClassIdentifier: 
   _speed: 20.8
-  _boostSpeed: 9.5
+  _boostSpeed: 14
   _boostDelta: {x: 0, y: 0.25, z: -1.7}
+  _boxCastDistance: 1
+  _boxCastSize: {x: 0.8, y: 0.5, z: 3}

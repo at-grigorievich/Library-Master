@@ -2,53 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a25ab9ee-e891-4f8b-a7f2-2326c6ea43ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/BookParametersContainer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/BookParametersContainer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/States/BookCancelMovingState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/States/BookCancelMovingState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/States/BookEndMovingState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/States/BookEndMovingState.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LibraryMaster/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LibraryMaster/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Blue.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Brown.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Brown.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Green.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Green.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Orange.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Orange.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Yellow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/1/1 Yellow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Blue.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Brown.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Brown.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Green.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Green.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Orange.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Orange.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Yellow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/2/2 Yellow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/3/3 Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/3/3 Blue.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/3/3 Brown.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/3/3 Brown.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/3/3 Green.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/3/3 Green.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/3/3 Orange.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/3/3 Orange.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/3/3 Yellow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/3/3 Yellow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/4/4 Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/4/4 Blue.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/4/4 Brown.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/4/4 Brown.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/4/4 Green.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/4/4 Green.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/4/4 Orange.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/4/4 Orange.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/4/4 Yellow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/4/4 Yellow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/5/5 Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/5/5 Blue.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/5/5 Brown.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/5/5 Brown.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/5/5 Green.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/5/5 Green.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/5/5 Orange.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/5/5 Orange.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/5/5 Yellow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/5/5 Yellow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/6/6 Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/6/6 Blue.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/6/6 Brown.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/6/6 Brown.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/6/6 Green.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/6/6 Green.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/6/6 Orange.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/6/6 Orange.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/6/6 Yellow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/6/6 Yellow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/7/7 Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/7/7 Blue.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/7/7 Brown.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/7/7 Brown.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/7/7 Green.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/7/7 Green.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/7/7 Orange.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/7/7 Orange.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/7/7 Yellow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/7/7 Yellow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/8/8 Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/8/8 Blue.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/8/8 Brown.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/8/8 Brown.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/8/8 Green.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/8/8 Green.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/8/8 Orange.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/8/8 Orange.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Books/8/8 Yellow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Books/8/8 Yellow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Book Data/1 Book Values.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Book Data/1 Book Values.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Book logic/Book.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/Book.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Book logic/BookParametersContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/BookParametersContainer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Book logic/Interfaces/IMovable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/Interfaces/IMovable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Book logic/States/BookIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/States/BookIdleState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Book logic/States/BookMovingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Book logic/States/BookMovingState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level Control Logic/Blocks Logic/Interfaces/IShelf.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level Control Logic/Blocks Logic/Interfaces/IShelf.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level Control Logic/Blocks Logic/ShelfBlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level Control Logic/Blocks Logic/ShelfBlock.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Logic/Interfaces/IInputable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Logic/Interfaces/IInputable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Logic/PlayerInputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Logic/PlayerInputService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Logic/PlayerLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Logic/PlayerLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +87,8 @@
       <option name="presentableId" value="Default" />
       <updated>1644419313882</updated>
       <workItem from="1644419323477" duration="3981000" />
-      <workItem from="1644513012802" duration="9503000" />
+      <workItem from="1644513012802" duration="10358000" />
+      <workItem from="1644585334869" duration="12472000" />
     </task>
     <servers />
   </component>
