@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1766267723811937373}
   - component: {fileID: 1766267723811937374}
+  - component: {fileID: -7698267953630249806}
   m_Layer: 0
   m_Name: 8 Brown
   m_TagString: Untagged
@@ -47,6 +48,19 @@ MonoBehaviour:
   _bookParameters: {fileID: 11400000, guid: 1430911938be57f44a95060bacceaf72, type: 2}
   _weight: 8
   _thickness: 1.2
+--- !u!65 &-7698267953630249806
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766267723811937372}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9445539, y: 0.584901, z: 1.757176}
+  m_Center: {x: -0.06284833, y: -0.020355403, z: 0.00042313337}
 --- !u!1 &7345034787089139808
 GameObject:
   m_ObjectHideFlags: 0

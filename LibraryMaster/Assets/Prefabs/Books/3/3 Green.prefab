@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2340637887713826025}
   - component: {fileID: 2340637887713826030}
+  - component: {fileID: 6549874900154500136}
   m_Layer: 0
   m_Name: 3 Green
   m_TagString: Untagged
@@ -47,6 +48,19 @@ MonoBehaviour:
   _bookParameters: {fileID: 11400000, guid: 1430911938be57f44a95060bacceaf72, type: 2}
   _weight: 3
   _thickness: 0.7
+--- !u!65 &6549874900154500136
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2340637887713826024}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7034754, y: 0.33796868, z: 1.5237558}
+  m_Center: {x: -0.060084164, y: -0.0060156435, z: -0.0023797452}
 --- !u!1 &6712085228270281690
 GameObject:
   m_ObjectHideFlags: 0
