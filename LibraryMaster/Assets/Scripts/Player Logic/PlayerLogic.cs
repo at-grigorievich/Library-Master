@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using ATG.LevelControl;
 using BookLogic;
+using DG.Tweening;
 using PlayerLogic;
 using UnityEngine;
 using Zenject;
@@ -11,6 +12,9 @@ namespace Player_Logic
 {
     public class PlayerLogic : MonoBehaviour
     {
+        [SerializeField] private float _defaultFOV;
+        [SerializeField] private float _loopFOV;
+        
         [Inject] private IInputable _inputable;
         
         [Inject] private ILevelStatus _levelStatus;
@@ -45,6 +49,8 @@ namespace Player_Logic
             _inputable.OnStartTouch += OnStartTouch;
             _inputable.OnTouching += OnTouching;
             _inputable.OnEndTouch += OnEndTouch;
+
+            _camera.DOOrthoSize(_defaultFOV, 0.25f);
         }
         private void PlayerEnd(object sender, EventArgs e)
         {
@@ -77,9 +83,21 @@ namespace Player_Logic
 
         private IEnumerator WaitPlaceAllBooks()
         {
+            IShelf _shelf = null;
+            
             yield return new WaitUntil(() =>
-                _shelfsOnLevel.Find(s => s.BooksOnShelf == _totalBookCount) != null
+                {
+                    _shelf = _shelfsOnLevel.Find(s => s.BooksOnShelf == _totalBookCount);
+                    return _shelf != null;
+                }
             );
+
+            if (_shelf is ShelfBlock block)
+            {
+                DOTween.Sequence()
+                    .Append(_camera.transform.DOLookAt(block.transform.position + 2f * Vector3.up, 1f))
+                    .Join(_camera.DOOrthoSize(_loopFOV, 1f));
+            }
             
             _levelStatus.CompleteLevel();
         }
