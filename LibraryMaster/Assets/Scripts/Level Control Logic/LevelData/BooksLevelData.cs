@@ -21,9 +21,24 @@ namespace ATG.LevelControl
         [Space(10)]
         [SerializeField] private ShelfBlock[] _shelfs;
         [SerializeField] private BooksData[] _booksOnShelfs;
+
+        public int BooksOnLevel
+        {
+            get
+            {
+                int totalCount = 0;
+
+                foreach (var data in _booksOnShelfs)
+                {
+                    totalCount += data.Books.Length;
+                }
+
+                return totalCount;
+            }
+        }
         
         public override LevelType TypeOfLevel => (LevelType) Enum.Parse(typeof(LevelType), _levelType.ToString());
-        
+
         public override T[] GetAnsInstantiateLevelBlocks<T>(ICreateLevelBehaviour createLevel)
         {
             if (createLevel == null)

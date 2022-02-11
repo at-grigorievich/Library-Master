@@ -29,7 +29,9 @@ namespace ATG.LevelControl
         {
             _placePosition = _spawnPosition.position;
         }
-        
+
+        public int BooksOnShelf => _booksOnShelf?.Count ?? 0;
+
         public bool TryAddBook(Book book)
         {
             if (!_booksOnShelf.Contains(book))
