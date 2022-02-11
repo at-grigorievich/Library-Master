@@ -12,6 +12,8 @@ namespace Player_Logic
     public class PlayerLogic : MonoBehaviour
     {
         [Inject] private IInputable _inputable;
+        
+        [Inject] private ILevelStatus _levelStatus;
         [Inject] private ILevelSystem _levelSystem;
         
         private IMovable _movableObject;
@@ -28,14 +30,27 @@ namespace Player_Logic
 
         private void Start()
         {
-            _inputable.OnStartTouch += OnStartTouch;
-            _inputable.OnTouching += OnTouching;
-            _inputable.OnEndTouch += OnEndTouch;
-
+            _levelStatus.OnLevelStart += PlayerStart;
+            _levelStatus.OnCompleteLevel += PlayerEnd;
+            _levelStatus.OnFailedLevel += PlayerEnd;
+            
             _shelfsOnLevel = new List<IShelf>(FindObjectsOfType<ShelfBlock>());
             _totalBookCount = ((BooksLevelData) _levelSystem.CurrentLevel).BooksOnLevel;
 
             StartCoroutine(WaitPlaceAllBooks());
+        }
+
+        private void PlayerStart(object sender, EventArgs e)
+        {
+            _inputable.OnStartTouch += OnStartTouch;
+            _inputable.OnTouching += OnTouching;
+            _inputable.OnEndTouch += OnEndTouch;
+        }
+        private void PlayerEnd(object sender, EventArgs e)
+        {
+            _inputable.OnStartTouch -= OnStartTouch;
+            _inputable.OnTouching -= OnTouching;
+            _inputable.OnEndTouch -= OnEndTouch;
         }
 
         private void OnStartTouch(object sender, ShelfBookArgs e)
@@ -43,7 +58,6 @@ namespace Player_Logic
             _movableObject = e.Movable;
             _movableObject.OnStartMoving(e.Shelf);
         }
-        
         private void OnEndTouch(object sender, EventArgs e)
         {
             if (_movableObject != null)
@@ -52,7 +66,6 @@ namespace Player_Logic
                 _movableObject = null;
             }
         }
-        
         private void OnTouching(object sender, Vector3 e)
         {
             if (_movableObject != null)
@@ -67,7 +80,8 @@ namespace Player_Logic
             yield return new WaitUntil(() =>
                 _shelfsOnLevel.Find(s => s.BooksOnShelf == _totalBookCount) != null
             );
-            Debug.Log("finish");
+            
+            _levelStatus.CompleteLevel();
         }
         
     }

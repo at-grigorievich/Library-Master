@@ -2,11 +2,14 @@
 using ATG.LevelControl;
 using BookLogic;
 using UnityEngine;
+using Zenject;
 
 namespace PlayerLogic
 {
     public class PlayerInputService : MonoBehaviour, IInputable
     {
+        [Inject] private ILevelStatus _levelStatus;
+        
         private Camera _camera;
         
         public event EventHandler<ShelfBookArgs> OnStartTouch;
@@ -14,36 +17,54 @@ namespace PlayerLogic
         public event EventHandler OnEndTouch;
 
         private Vector3 _lastTouchPosition;
+
+        private Action _touchResponse;
         
         private void Awake()
         {
             _camera = Camera.main;
+            _touchResponse = DetectStartLevel;
         }
 
         private void Update()
         {
             if (Input.touchCount > 0)
             {
-                Touch touch = Input.GetTouch(0);
-
-                Vector3 touchPosition = touch.position;
-
-                switch (touch.phase)
-                {
-                    case TouchPhase.Began:
-                        TrySelectBook(touchPosition);
-                        break;
-                    case TouchPhase.Ended:
-                        TouchingEnd();
-                        break;
-                    case TouchPhase.Moved:
-                    case TouchPhase.Stationary:
-                        TouchingProcess(touchPosition);
-                        break;
-                }
+                _touchResponse?.Invoke();
             }
         }
 
+        private void DetectStartLevel()
+        {
+            Touch touch = Input.GetTouch(0);
+
+            if (touch.phase == TouchPhase.Ended)
+            {
+                _levelStatus.StartLevel();
+                _touchResponse = DetectSelectBook;
+            }
+        }
+        private void DetectSelectBook()
+        {
+            Touch touch = Input.GetTouch(0);
+
+            Vector3 touchPosition = touch.position;
+
+            switch (touch.phase)
+            {
+                case TouchPhase.Began:
+                    TrySelectBook(touchPosition);
+                    break;
+                case TouchPhase.Ended:
+                    TouchingEnd();
+                    break;
+                case TouchPhase.Moved:
+                case TouchPhase.Stationary:
+                    TouchingProcess(touchPosition);
+                    break;
+            }
+        }
+        
         
         private void TrySelectBook(Vector3 touchPosition)
         {

@@ -13,7 +13,7 @@ namespace UILogic
 
         public override void Show()
         {
-            _rectText.SetText(_playerData.CurrentLevel + "level");
+            _rectText.SetText(_playerData.CurrentLevel.ToString());
             
             base.Show();
             
