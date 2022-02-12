@@ -30,7 +30,8 @@ namespace VFXLogic
             }
 
             waitingVFX.transform.position = position;
-            waitingVFX.transform.LookAt(lookTO);
+            //waitingVFX.transform.LookAt(lookTO);
+            waitingVFX.transform.rotation = Quaternion.Euler(lookTO);
 
             waitingVFX.Play();
             
@@ -79,7 +80,8 @@ namespace VFXLogic
             }
             
             ps.transform.position = position;
-            ps.transform.LookAt(lookTo);
+            //ps.transform.LookAt(lookTo);
+            ps.transform.rotation = Quaternion.Euler(lookTo);
 
             ps.Play();
 
