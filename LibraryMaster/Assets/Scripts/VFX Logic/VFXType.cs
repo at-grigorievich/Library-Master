@@ -7,6 +7,7 @@
         ObstaclePunch,
         ButtonClick,
         Death,
-        Confetti
+        Confetti,
+        Poof
     }
 }

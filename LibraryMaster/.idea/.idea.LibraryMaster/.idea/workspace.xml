@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a25ab9ee-e891-4f8b-a7f2-2326c6ea43ea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Debrief Logic.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Debrief Logic/DebriefCongratulationShower.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Debrief Logic/DebriefCongratulationShower.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LibraryMaster/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LibraryMaster/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Data/VFX Data/VFX data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/VFX Data/VFX data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VFX Logic/IVFXControllable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VFX Logic/IVFXControllable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level Control Logic/Blocks Logic/ShelfBlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level Control Logic/Blocks Logic/ShelfBlock.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/VFX Logic/VFXCreatorService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VFX Logic/VFXCreatorService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VFX Logic/VFXType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VFX Logic/VFXType.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,10 +55,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="3056">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="3056" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -81,6 +77,7 @@
       <workItem from="1644419323477" duration="3981000" />
       <workItem from="1644513012802" duration="10358000" />
       <workItem from="1644585334869" duration="17301000" />
+      <workItem from="1644663094059" duration="1917000" />
     </task>
     <servers />
   </component>

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using BookLogic;
 using UnityEngine;
+using VFXLogic;
+using Zenject;
 
 namespace ATG.LevelControl
 {
@@ -10,11 +12,14 @@ namespace ATG.LevelControl
     {
         [Space(5)]
         [SerializeField] private Transform _spawnPosition;
+
+        [Inject] private IVFXControllable _vfx;
         
         private SortedSet<Book> _booksOnShelf;
 
         private Vector3 _placePosition;
         
+
         public void InitShelf(Book[] books)
         {
            InitShelf();
@@ -61,6 +66,9 @@ namespace ATG.LevelControl
                 {
                     _booksOnShelf.Add(book);
                     AddBook(book);
+
+                    Vector3 vfxPosition = _placePosition - book.Thickness / 2f*Vector3.up;
+                    _vfx.PlayVFX(VFXType.Poof, vfxPosition, new Vector3(90f,0f,0f));
                 }
             }
             
