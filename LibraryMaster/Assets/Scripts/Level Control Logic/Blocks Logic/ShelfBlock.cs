@@ -24,9 +24,10 @@ namespace ATG.LevelControl
         {
            InitShelf();
            
+           _booksOnShelf = new SortedSet<Book>(new SortBySize());
+           
             if (books.Length > 0)
             {
-                _booksOnShelf = new SortedSet<Book>(new SortBySize());
                 SpawnBooks(books);
             }
         }
