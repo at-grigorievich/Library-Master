@@ -9,21 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ac30ba5c39647b0a720005e6cf2809b, type: 3}
+  m_Script: {fileID: 11500000, guid: 98bb8dbafbe9439f94cf6ca6571f6bc0, type: 3}
   m_Name: 1
   m_EditorClassIdentifier: 
   id: 1
-  name: 
+  name: Tutorial
   _levelType: 3
   _shelfs:
-  - {fileID: 3573920760463609761, guid: 611b2f2eb4b6d1a478887c6bcc6540af, type: 3}
   - {fileID: 2203364568761008750, guid: e2a64b72f45b8ca4ca6c64a506669459, type: 3}
   - {fileID: 6876284852152762404, guid: a6156ac14739bae428f22a422b53735c, type: 3}
   _booksOnShelfs:
   - _books:
-    - {fileID: 6655541275747406391, guid: 6b3522aa1f3c13c44a2880a67a935e37, type: 3}
+    - {fileID: 2340637887713826030, guid: 704b544d7e81f1042869aea9106fcec6, type: 3}
+    - {fileID: 4837091271111160178, guid: f9c92003f22ab5c458c4b2fa2447840f, type: 3}
   - _books:
-    - {fileID: 946333555065618502, guid: a019c8328ec06a44e82877df9eeb1c00, type: 3}
     - {fileID: 6641026113684525196, guid: 4d624b3317e05f745bfe75f7f5f4c04c, type: 3}
-  - _books:
-    - {fileID: 2340637887713826030, guid: bc182d78891d6c54aa74f465d441e0fd, type: 3}
+  _tutorialElements:
+  - {fileID: 7025945993362447684, guid: 14607c64f0ec3214d9436d8361769109, type: 3}
+  - {fileID: 7025945993362447684, guid: 2eb2d958b506061408be8a4b680a7c5b, type: 3}

@@ -2,11 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a25ab9ee-e891-4f8b-a7f2-2326c6ea43ea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Level Control Logic/LevelData/BookLevelDataWithTutor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Level Control Logic/LevelData/BookLevelDataWithTutor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tutorial Logic/Commands.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tutorial Logic/Commands/Interfaces.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tutorial Logic/Commands/Interfaces/ICommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tutorial Logic/Commands/Interfaces/ICommand.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tutorial Logic/Commands/PlaceFirstBookCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tutorial Logic/Commands/PlaceFirstBookCommand.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tutorial Logic/Commands/SelectFirstBookCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tutorial Logic/Commands/SelectFirstBookCommand.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tutorial Logic/TutorialElement.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Tutorial Logic/TutorialElement.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LibraryMaster/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LibraryMaster/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/VFX Data/VFX data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/VFX Data/VFX data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level Control Logic/Blocks Logic/ShelfBlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level Control Logic/Blocks Logic/ShelfBlock.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VFX Logic/VFXCreatorService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VFX Logic/VFXCreatorService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VFX Logic/VFXType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VFX Logic/VFXType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Level Data/Levels List.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Level Data/Levels List.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Level Data/Levels/1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Level Data/Levels/1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Data/Level Data/Levels/1.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Level Data/Levels/1.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Books/Book Yellow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Books/Book Yellow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +93,7 @@
       <workItem from="1644513012802" duration="10358000" />
       <workItem from="1644585334869" duration="17301000" />
       <workItem from="1644663094059" duration="1917000" />
+      <workItem from="1644704197605" duration="8085000" />
     </task>
     <servers />
   </component>
