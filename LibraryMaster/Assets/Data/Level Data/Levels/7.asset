@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac30ba5c39647b0a720005e6cf2809b, type: 3}
+  m_Name: 7
+  m_EditorClassIdentifier: 
+  id: 7
+  name: 
+  _levelType: 3
+  _shelfs:
+  - {fileID: 3573920760463609761, guid: 6db93735afe136e4eb8e38fe3eeca011, type: 3}
+  - {fileID: 2203364568761008750, guid: 67d91b90793b9d24b9f47562dc6a31d6, type: 3}
+  - {fileID: 6876284852152762404, guid: f207d55722a6a544a83895c4874db60f, type: 3}
+  _booksOnShelfs:
+  - _books:
+    - {fileID: 946333555065618502, guid: 90c3e0998e6ee5e4584bff221daa861f, type: 3}
+    - {fileID: 6655541275747406391, guid: 225f13210fad0174fb2df415b86458b1, type: 3}
+  - _books:
+    - {fileID: 946333555065618502, guid: 90c3e0998e6ee5e4584bff221daa861f, type: 3}
+    - {fileID: 2340637887713826030, guid: 704b544d7e81f1042869aea9106fcec6, type: 3}
+  - _books:
+    - {fileID: 6655541275747406391, guid: aefdac425e1b1b3488310ad35a5d7aec, type: 3}
+    - {fileID: 4837091271111160178, guid: cdeece559b533704f91a523a95f48591, type: 3}
