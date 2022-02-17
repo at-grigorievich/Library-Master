@@ -7,6 +7,8 @@ namespace ATG.LevelControl
         int Id { get; }
         string Name { get; }
         
+        Color BackgroundColor { get; }
+        
         LevelType TypeOfLevel { get; }
         
         T[] GetAnsInstantiateLevelBlocks<T>(ICreateLevelBehaviour _createLevel) 

@@ -29,10 +29,12 @@ namespace ATG.LevelControl
     {
         [SerializeField] private int id;
         [SerializeField] private new string name;
+        [SerializeField] private Color _backgroundColor;
         
         public int Id => id;
         public string Name => name;
-        
+        public Color BackgroundColor => _backgroundColor;
+
         public abstract LevelType TypeOfLevel { get;}
 
 

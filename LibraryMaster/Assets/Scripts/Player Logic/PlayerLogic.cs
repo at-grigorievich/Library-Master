@@ -42,6 +42,8 @@ namespace Player_Logic
             _totalBookCount = ((BooksLevelData) _levelSystem.CurrentLevel).BooksOnLevel;
 
             StartCoroutine(WaitPlaceAllBooks());
+
+            _camera.backgroundColor = _levelSystem.CurrentLevel.BackgroundColor;
         }
 
         private void PlayerStart(object sender, EventArgs e)

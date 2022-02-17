@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   name: 
+  _backgroundColor: {r: 0.5803922, g: 0.8509804, b: 0.60784316, a: 1}
   _levelType: 3
   _shelfs:
   - {fileID: 3573920760463609761, guid: 6db93735afe136e4eb8e38fe3eeca011, type: 3}
