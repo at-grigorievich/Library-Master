@@ -30,6 +30,9 @@ namespace Debrief_Logic
 
         private void OnCompleteLevel(object sender, EventArgs e)
         {
+#if UNITY_EDITOR
+            Vibration.Vibrate();
+#endif
             ParticleSystem ps = _vfx.PlayVFXLoop(VFXType.Confetti, Vector3.zero, Vector3.down);
             
             ps.transform.SetParent(_camera.transform);
