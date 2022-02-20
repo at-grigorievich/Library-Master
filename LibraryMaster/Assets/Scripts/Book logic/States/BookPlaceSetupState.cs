@@ -16,9 +16,13 @@ namespace BookLogic.States
         public override void Enter()
         {
             bool isAlreadyPlaced = _callack();
-
+            
             if (isAlreadyPlaced)
             {
+#if UNITY_ANDROID
+                Vibration.Vibrate(200);
+#endif
+                
                 StateSwitcher.StateSwitcher<BookIdleState>();
             }
             else

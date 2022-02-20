@@ -1,6 +1,5 @@
 ﻿using System;
 using ATG.LevelControl;
-using BookLogic;
 using UnityEngine;
 using Zenject;
 
@@ -24,6 +23,10 @@ namespace PlayerLogic
         {
             _camera = Camera.main;
             _touchResponse = DetectStartLevel;
+
+#if UNITY_ANDROID
+            Vibration.Init();
+#endif
         }
 
         private void Update()
@@ -37,9 +40,13 @@ namespace PlayerLogic
         private void DetectStartLevel()
         {
             Touch touch = Input.GetTouch(0);
-
+            
             if (touch.phase == TouchPhase.Ended)
             {
+                
+#if UNITY_ANDROID
+                Vibration.Vibrate();
+#endif
                 _levelStatus.StartLevel();
                 _touchResponse = DetectSelectBook;
             }

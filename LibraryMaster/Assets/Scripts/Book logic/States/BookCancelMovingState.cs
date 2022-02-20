@@ -17,6 +17,11 @@ namespace BookLogic.States
         
         public override void Enter()
         {
+            
+#if UNITY_ANDROID
+            Vibration.VibratePop();
+#endif
+            
             Vector3 backPosition = MainObject.PreviousPlacePosition;
             backPosition.z = MainObject.Transform.position.z;
 
