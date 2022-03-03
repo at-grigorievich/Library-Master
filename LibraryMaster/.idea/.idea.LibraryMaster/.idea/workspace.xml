@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a25ab9ee-e891-4f8b-a7f2-2326c6ea43ea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LibraryMaster/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LibraryMaster/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Debrief Logic/DebriefCongratulationShower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Debrief Logic/DebriefCongratulationShower.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
