@@ -1,5 +1,5 @@
 # Library-Master
-Hypercasual Puzzle example
+Hypercasual Puzzle prototype example
 
 # Gameplay video
 
