@@ -1,8 +1,9 @@
-using Facebook.Unity;
+//using Facebook.Unity;
 using UnityEngine;
 
 public class FacebookInit : MonoBehaviour
 {
+    /*
     void Awake ()
     {
         if (!FB.IsInitialized) {
@@ -36,4 +37,5 @@ public class FacebookInit : MonoBehaviour
             Time.timeScale = 1;
         }
     }
+    */
 }
