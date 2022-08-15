@@ -8,10 +8,13 @@ namespace BookLogic.States
     public class BookMovingState: BaseStatement<IMovable>
     {
         private Action _onMove;
+
+        private readonly Transform _book;
         
         public BookMovingState(IMovable mainObject, IStateSwitcher stateSwitcher) 
             : base(mainObject, stateSwitcher)
         {
+           _book = MainObject.Transform;
         }
 
         public override void Enter()
@@ -44,13 +47,16 @@ namespace BookLogic.States
 
         private void MoveToTouch()
         {
-            Transform book = MainObject.Transform;
             Vector3 targetPos = MainObject.FuturePosition;
-            targetPos.z = book.position.z;
+            
+            var position = _book.position;
+            
+            targetPos.z = position.z;
             
             float speed = MainObject.ParametersData.Speed;
 
-            book.position = Vector3.MoveTowards(book.position, targetPos, speed * Time.deltaTime);
+            position = Vector3.MoveTowards(position, targetPos, speed * Time.deltaTime);
+            _book.position = position;
         }
     }
 }

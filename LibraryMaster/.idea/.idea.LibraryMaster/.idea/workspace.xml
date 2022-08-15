@@ -3,19 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a25ab9ee-e891-4f8b-a7f2-2326c6ea43ea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LibraryMaster/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LibraryMaster/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level Control Logic/Blocks Logic/Interfaces/IShelf.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level Control Logic/Blocks Logic/Interfaces/IShelf.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level Control Logic/Blocks Logic/ShelfBlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level Control Logic/Blocks Logic/ShelfBlock.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Logic/Interfaces/IInputable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Logic/Interfaces/IInputable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Logic/PlayerInputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Logic/PlayerInputService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Logic/PlayerLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Logic/PlayerLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Logic/UIControlSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Logic/UIControlSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Logic/UIPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI Logic/UIPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
