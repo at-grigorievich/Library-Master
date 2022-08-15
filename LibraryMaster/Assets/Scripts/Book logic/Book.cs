@@ -2,13 +2,26 @@
 using ATG.LevelControl;
 using ATGStateMachine;
 using BookLogic.States;
+using TMPro;
 using UnityEngine;
 
 namespace BookLogic
 {
+    [Serializable]
+    public class BookWeight
+    {
+        [SerializeField] private TextMeshProUGUI _data;
+
+        public void Init(int weight)
+        {
+            _data.SetText(weight.ToString());
+        }
+    }
+
     public class Book : StatementBehaviour<IMovable>, IWeightable, IMovable
     {
         [SerializeField] private BookParametersContainer _bookParameters;
+        [SerializeField] private BookWeight _bookWeight;
         [Space(10)]
         [Range(1,20)]
         [SerializeField] private int _weight;
@@ -32,6 +45,8 @@ namespace BookLogic
 
         private void Awake()
         {
+            _bookWeight.Init(_weight);
+            
             AllStates.Add(new BookIdleState(this,this));
             AllStates.Add(new BookMovingState(this,this));
             AllStates.Add(new BookEndMovingState(this,this));
