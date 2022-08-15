@@ -48,53 +48,55 @@ namespace Player_Logic
 
         private void PlayerStart(object sender, EventArgs e)
         {
-            _inputable.OnStartTouch += OnStartTouch;
-            _inputable.OnTouching += OnTouching;
-            _inputable.OnEndTouch += OnEndTouch;
+            _inputable.OnStartInput+= OnStartInput;
+            _inputable.OnInput += OnInput;
+            _inputable.OnEndInput += OnEndInput;
 
             _camera.DOOrthoSize(_defaultFOV, 0.25f);
         }
         private void PlayerEnd(object sender, EventArgs e)
         {
-            _inputable.OnStartTouch -= OnStartTouch;
-            _inputable.OnTouching -= OnTouching;
-            _inputable.OnEndTouch -= OnEndTouch;
+            _inputable.OnStartInput -= OnStartInput;
+            _inputable.OnInput -= OnInput;
+            _inputable.OnEndInput -= OnEndInput;
         }
 
-        private void OnStartTouch(object sender, ShelfBookArgs e)
+        private void OnStartInput(object sender, ShelfBookArgs e)
         {
+            if(_movableObject != null) return;
+            
             _movableObject = e.Movable;
             _movableObject.OnStartMoving(e.Shelf);
         }
-        private void OnEndTouch(object sender, EventArgs e)
+        private void OnInput(object sender, Vector3 e)
         {
             if (_movableObject != null)
             {
-                _movableObject.OnEndMoving();
-                _movableObject = null;
-            }
-        }
-        private void OnTouching(object sender, Vector3 e)
-        {
-            if (_movableObject != null)
-            {
-                Vector3 globalPosition = _camera.ScreenToWorldPoint(e);
+                var globalPosition = _camera.ScreenToWorldPoint(e);
                 _movableObject.OnMoving(globalPosition);
             }
         }
-
+        private void OnEndInput(object sender, EventArgs e)
+        {
+            if (_movableObject == null) return;
+            
+            _movableObject.OnEndMoving();
+            _movableObject = null;
+        }
+        
+        
         private IEnumerator WaitPlaceAllBooks()
         {
-            IShelf _shelf = null;
+            IShelf shelf = null;
             
             yield return new WaitUntil(() =>
                 {
-                    _shelf = _shelfsOnLevel.Find(s => s.BooksOnShelf == _totalBookCount);
-                    return _shelf != null;
+                    shelf = _shelfsOnLevel.Find(s => s.BooksOnShelf == _totalBookCount);
+                    return shelf != null;
                 }
             );
 
-            if (_shelf is ShelfBlock block)
+            if (shelf is ShelfBlock block)
             {
                 DOTween.Sequence()
                     .Append(_camera.transform.DOLookAt(block.transform.position + 2f * Vector3.up, 1f))

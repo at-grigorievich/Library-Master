@@ -19,8 +19,8 @@ namespace PlayerLogic
 {
     public interface IInputable
     {
-        public event EventHandler<ShelfBookArgs> OnStartTouch;
-        public event EventHandler<Vector3> OnTouching;
-        public event EventHandler OnEndTouch;
+        public event EventHandler<ShelfBookArgs> OnStartInput;
+        public event EventHandler<Vector3> OnInput;
+        public event EventHandler OnEndInput;
     }
 }

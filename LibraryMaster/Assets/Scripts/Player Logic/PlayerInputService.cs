@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using ATG.LevelControl;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Zenject;
 
 namespace PlayerLogic
@@ -8,95 +10,70 @@ namespace PlayerLogic
     public class PlayerInputService : MonoBehaviour, IInputable
     {
         [Inject] private ILevelStatus _levelStatus;
-        
+
         private Camera _camera;
-        
-        public event EventHandler<ShelfBookArgs> OnStartTouch;
-        public event EventHandler<Vector3> OnTouching;
-        public event EventHandler OnEndTouch;
+        private PlayerInput _playerInput;
 
-        private Vector3 _lastTouchPosition;
+        private Action _tryToMoveSelected;
 
-        private Action _touchResponse;
-        
-        private void Awake()
+        public event EventHandler<ShelfBookArgs> OnStartInput;
+        public event EventHandler<Vector3> OnInput;
+        public event EventHandler OnEndInput;
+
+
+        private IEnumerator Start()
         {
             _camera = Camera.main;
-            _touchResponse = DetectStartLevel;
 
-#if UNITY_ANDROID
-            Vibration.Init();
-#endif
-        }
+            _playerInput = new PlayerInput();
 
-        private void Update()
-        {
-            if (Input.touchCount > 0)
-            {
-                _touchResponse?.Invoke();
-            }
-        }
-
-        private void DetectStartLevel()
-        {
-            Touch touch = Input.GetTouch(0);
+            yield return new WaitForSeconds(.5f);
             
-            if (touch.phase == TouchPhase.Ended)
-            {
-                
-#if UNITY_ANDROID
-                Vibration.Vibrate();
-#endif
-                _levelStatus.StartLevel();
-                _touchResponse = DetectSelectBook;
-            }
+            _playerInput.Player.Select.performed += DetectStartLevel;
+            _playerInput.Enable();
         }
-        private void DetectSelectBook()
+
+        private void Update() => _tryToMoveSelected?.Invoke();
+
+        private void OnDisable()
         {
-            Touch touch = Input.GetTouch(0);
+            _playerInput.Player.Select.performed -= SelectBook;
+            _playerInput.Player.Unselect.performed -= UnselectBook;
 
-            Vector3 touchPosition = touch.position;
-
-            switch (touch.phase)
-            {
-                case TouchPhase.Began:
-                    TrySelectBook(touchPosition);
-                    break;
-                case TouchPhase.Ended:
-                    TouchingEnd();
-                    break;
-                case TouchPhase.Moved:
-                case TouchPhase.Stationary:
-                    TouchingProcess(touchPosition);
-                    break;
-            }
+            _tryToMoveSelected = null;
+            
+            _playerInput.Disable();
         }
-        
-        
-        private void TrySelectBook(Vector3 touchPosition)
+
+        private void DetectStartLevel(InputAction.CallbackContext obj)
         {
-            RaycastHit hit;
-            Ray ray = _camera.ScreenPointToRay(touchPosition);
+            _playerInput.Player.Select.performed -= DetectStartLevel;
 
-            if (Physics.Raycast(ray, out hit))
-            {
-                if (hit.transform.TryGetComponent(out IShelf shelf))
-                {
-                    var arg = new ShelfBookArgs(shelf.RemoveBook(), shelf);
-                    OnStartTouch?.Invoke(this,arg);
-                }
-            }
+            _playerInput.Player.Select.performed += SelectBook;
+            _playerInput.Player.Unselect.performed += UnselectBook;
+
+            _tryToMoveSelected += TouchingProcess;
+
+            _levelStatus.StartLevel();
         }
 
-        private void TouchingProcess(Vector3 touchPosition)
+        private void SelectBook(InputAction.CallbackContext obj)
         {
-            if (Vector3.Distance(_lastTouchPosition, touchPosition) > Mathf.Epsilon)
-            {
-                OnTouching?.Invoke(this, touchPosition);
-                _lastTouchPosition = touchPosition;
-            }
-        }
+            var inputPosition = _playerInput.Player.Position.ReadValue<Vector2>();
 
-        private void TouchingEnd() => OnEndTouch?.Invoke(this, null);
+            if (!Physics.Raycast(_camera.ScreenPointToRay(inputPosition), out var hit)) 
+                return;
+
+            if (!hit.transform.TryGetComponent(out IShelf shelf)) return;
+
+            if (!shelf.ContainsBook) return;
+            
+            var arg = new ShelfBookArgs(shelf.RemoveBook(), shelf);
+            OnStartInput?.Invoke(this, arg);
+        }
+        private void UnselectBook(InputAction.CallbackContext obj) =>
+            OnEndInput?.Invoke(this, null);
+        private void TouchingProcess() => 
+            OnInput?.Invoke(this, _playerInput.Player.Position.ReadValue<Vector2>());
     }
 }

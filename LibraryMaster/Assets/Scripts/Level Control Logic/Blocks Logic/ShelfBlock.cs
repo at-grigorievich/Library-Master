@@ -36,6 +36,7 @@ namespace ATG.LevelControl
             _placePosition = _spawnPosition.position;
         }
 
+        public bool ContainsBook => BooksOnShelf > 0;
         public int BooksOnShelf => _booksOnShelf?.Count ?? 0;
 
         public bool TryAddBook(Book book)
@@ -57,11 +58,8 @@ namespace ATG.LevelControl
                     
                     return isCompare;
                 }
-                else
-                {
-                    AddNewBook();
-                    return true;
-                }
+                AddNewBook();
+                return true;
 
                 void AddNewBook()
                 {
@@ -90,7 +88,7 @@ namespace ATG.LevelControl
                 return selected;
             }
 
-            throw new NullReferenceException("Cant find book on this shelf");
+            return null;
         }
         
         private void AddBook(Book book)

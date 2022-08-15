@@ -31,7 +31,8 @@ namespace UILogic
 
         private IEnumerator WaitToDisable()
         {
-            yield return new WaitForSeconds(_disableDelay);
+            yield return null;
+            //yield return new WaitForSeconds(_disableDelay);
             _rect.enabled = false;
         }
     }

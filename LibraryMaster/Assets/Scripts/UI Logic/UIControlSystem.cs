@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using ATG.LevelControl;
 using UnityEngine;
 using Zenject;
@@ -10,11 +11,12 @@ namespace UILogic
         [Inject] private ILevelStatus _levelStatus;
         [Inject] private ILevelSystem _levelSystem;
         [Inject] private IPanel[] _panels;
+        
 
         private void Start()
         {
             ShowPanel<LobbyPanel>();
-
+            
             _levelStatus.OnLevelStart += (sender, args) => ShowPanel<GamePanel>();
             
             _levelStatus.OnCompleteLevel += (sender, args) =>
@@ -30,6 +32,8 @@ namespace UILogic
             };
         }
 
+        
+        
         [ContextMenu("show panel")]
         public void ShowLobby() => ShowPanel<LobbyPanel>();
 
