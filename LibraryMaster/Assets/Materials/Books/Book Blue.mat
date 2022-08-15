@@ -2,16 +2,17 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Book Blue
   m_Shader: {fileID: 4800000, guid: 70e19283e0f45cc41b48de36b262b1bf, type: 3}
-  m_ShaderKeywords: 
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -63,6 +64,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
@@ -86,8 +88,8 @@ Material:
     - _ZWrite: 1
     - __dummy__: 0
     m_Colors:
-    - _Color: {r: 0.23921569, g: 0.81960785, b: 0.9490196, a: 1}
+    - _Color: {r: 0.054957304, g: 0.43940827, b: 0.8962264, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HColor: {r: 1, g: 0.99528295, b: 0.99528295, a: 1}
-    - _SColor: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}
+    - _SColor: {r: 0.4627451, g: 0.4627451, b: 0.4627451, a: 1}
   m_BuildTextureStacks: []
