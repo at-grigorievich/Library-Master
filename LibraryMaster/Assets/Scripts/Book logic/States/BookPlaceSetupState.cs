@@ -19,8 +19,8 @@ namespace BookLogic.States
             
             if (isAlreadyPlaced)
             {
-#if UNITY_ANDROID
-                Vibration.Vibrate(200);
+#if UNITY_ANDROID || UNITY_IOS
+                Taptic.Vibrate();
 #endif
                 
                 StateSwitcher.StateSwitcher<BookIdleState>();

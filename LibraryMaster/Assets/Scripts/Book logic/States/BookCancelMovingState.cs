@@ -18,8 +18,8 @@ namespace BookLogic.States
         public override void Enter()
         {
             
-#if UNITY_ANDROID
-            Vibration.VibratePop();
+#if UNITY_ANDROID || UNITY_IOS
+            Taptic.Vibrate();
 #endif
             
             Vector3 backPosition = MainObject.PreviousPlacePosition;

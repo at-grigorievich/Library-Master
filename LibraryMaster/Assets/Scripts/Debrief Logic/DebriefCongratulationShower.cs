@@ -30,8 +30,8 @@ namespace Debrief_Logic
 
         private void OnCompleteLevel(object sender, EventArgs e)
         {
-#if UNITY_ANDROID
-            Vibration.Vibrate();
+#if UNITY_ANDROID || UNITY_IOS
+            Taptic.Vibrate();
 #endif
             ParticleSystem ps = _vfx.PlayVFXLoop(VFXType.Confetti, Vector3.zero, Vector3.down);
             
