@@ -1,4 +1,5 @@
 ﻿using System;
+using InstantGamesBridge;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Zenject;
@@ -24,8 +25,10 @@ namespace ATG.LevelControl
         [Inject]
         public virtual void Initialize()
         {
+            Bridge.Initialize();
             _levelStatus.OnCompleteLevel += (sender, args) =>
             {
+                Bridge.advertisement.ShowInterstitial(true);
                 SaveLevel(CurrentLevelId + 1);
                 _playerData.UpdateLevel();
             };
