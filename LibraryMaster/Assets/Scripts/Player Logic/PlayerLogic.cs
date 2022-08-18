@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using ATG.LevelControl;
 using BookLogic;
 using DG.Tweening;
@@ -19,6 +20,9 @@ namespace Player_Logic
         
         [Inject] private ILevelStatus _levelStatus;
         [Inject] private ILevelSystem _levelSystem;
+
+        [DllImport("__Internal")]
+        private static extern void UpdateBodyColor(string color);
         
         private IMovable _movableObject;
 
@@ -43,7 +47,15 @@ namespace Player_Logic
 
             StartCoroutine(WaitPlaceAllBooks());
 
-            _camera.backgroundColor = _levelSystem.CurrentLevel.BackgroundColor;
+            var color = _levelSystem.CurrentLevel.BackgroundColor;
+            color.a = 0.5f;
+            var colorStr = $"#{ColorUtility.ToHtmlStringRGBA(color)}";
+            
+            _camera.backgroundColor = color;
+
+#if !UNITY_EDITOR && !UNITY_ANDROID && !UNITY_IOS
+            UpdateBodyColor(colorStr);
+#endif
         }
 
         private void PlayerStart(object sender, EventArgs e)

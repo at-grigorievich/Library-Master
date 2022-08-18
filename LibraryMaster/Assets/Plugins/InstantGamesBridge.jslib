@@ -1,5 +1,10 @@
 mergeInto(LibraryManager.library, {
 
+	UpdateBodyColor: function(color) {
+		var c = UTF8ToString(color);
+		document.body.style.background = c;
+	},
+
     InstantGamesBridgeInitialize: function() {
         window.initialize()
     },
