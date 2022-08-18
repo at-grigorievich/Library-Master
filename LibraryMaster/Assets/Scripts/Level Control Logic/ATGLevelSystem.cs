@@ -1,5 +1,5 @@
-﻿using System;
-using InstantGamesBridge;
+﻿using InstantGamesBridge;
+using InstantGamesBridge.Modules.Social;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Zenject;
@@ -9,7 +9,8 @@ namespace ATG.LevelControl
     public class ATGLevelSystem: ILevelSystem, IInitializable
     {
         private const string LevelInfoRef = "Level_ID";
-
+        private const string VkShareLink = "https://vk.com/app51404032";
+        
         [Inject] private LevelDataList _levelDataList;
         [Inject] private PlayerData.PlayerData _playerData;
         [Inject] private ILevelStatus _levelStatus;
@@ -25,10 +26,25 @@ namespace ATG.LevelControl
         [Inject]
         public virtual void Initialize()
         {
-            Bridge.Initialize();
             _levelStatus.OnCompleteLevel += (sender, args) =>
             {
-                Bridge.advertisement.ShowInterstitial(true);
+                if (Player_Logic.PlayerLogic.IsInit)
+                {
+                    if (Bridge.social.isShareSupported)
+                    {
+                        if (_playerData.CurrentLevel > 1)
+                            Bridge.advertisement.ShowInterstitial(true);
+                        else
+                        {
+                            Bridge.social.Share(new ShareVkOptions(VkShareLink));
+                        }
+                    }
+                    else
+                    {
+                        Bridge.advertisement.ShowInterstitial(true);
+                    }
+                }
+
                 SaveLevel(CurrentLevelId + 1);
                 _playerData.UpdateLevel();
             };

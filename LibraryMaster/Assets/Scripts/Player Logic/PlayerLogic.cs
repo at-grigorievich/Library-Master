@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using ATG.LevelControl;
+using ATG.PlayerData;
 using BookLogic;
 using DG.Tweening;
+using InstantGamesBridge;
 using PlayerLogic;
 using UnityEngine;
 using Zenject;
@@ -13,8 +15,13 @@ namespace Player_Logic
 {
     public class PlayerLogic : MonoBehaviour
     {
+        public static bool IsInit = false;
+        private static bool _isAddFavoritesShow = false;
+        
         [SerializeField] private float _defaultFOV;
         [SerializeField] private float _loopFOV;
+        
+        [Inject] private PlayerData _playerData;
         
         [Inject] private IInputable _inputable;
         
@@ -23,6 +30,7 @@ namespace Player_Logic
 
         [DllImport("__Internal")]
         private static extern void UpdateBodyColor(string color);
+        
         
         private IMovable _movableObject;
 
@@ -38,9 +46,28 @@ namespace Player_Logic
 
         private void Start()
         {
-            _levelStatus.OnLevelStart += PlayerStart;
-            _levelStatus.OnCompleteLevel += PlayerEnd;
-            _levelStatus.OnFailedLevel += PlayerEnd;
+            void InitSuccess()
+            {
+                _levelStatus.OnLevelStart += PlayerStart;
+                _levelStatus.OnCompleteLevel += PlayerEnd;
+                _levelStatus.OnFailedLevel += PlayerEnd;
+            }
+            
+            Bridge.Initialize(s =>
+            {
+                if (!s) return;
+
+                IsInit = true;
+                InitSuccess();
+                
+                if (_playerData.CurrentLevel == 1)
+                {
+                    if (Bridge.social.isInviteFriendsSupported)
+                        Bridge.social.InviteFriends();
+                    
+                }
+            });
+            
             
             _shelfsOnLevel = new List<IShelf>(FindObjectsOfType<ShelfBlock>());
             _totalBookCount = ((BooksLevelData) _levelSystem.CurrentLevel).BooksOnLevel;
